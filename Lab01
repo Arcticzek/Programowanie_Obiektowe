@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(getImie());
+        System.out.println(getWiek());
+        int d = 0;
+        System.out.println(CzyParzysta(d));
+        int a = getInt();
+        int b = getInt();
+        int c = getInt();
+        d = getInt();
+        int x =3;
+        Obliczenia(a, b);
+        System.out.println(Podzielna3i5(c));
+        System.out.println(Potega(a));
+        System.out.println(Pierwiastek(a));
+        System.out.println(Trojkat(a,b,x));
+    }
+
+    public static String getImie() {
+        return "Michał";
+    }
+
+    public static int getWiek() {
+        return 21;
+    }
+
+    public static int getInt() {
+        return new Scanner(System.in).nextInt();
+    }
+
+    public static void Obliczenia(int a, int b) {
+        System.out.println("suma " + a + "+" + b + "=" + (a + b));
+        System.out.println("roznica " + a + "-" + b + "=" + (a - b));
+        System.out.println("Iloczyn " + a + "*" + b + "=" + (a * b));
+
+    }
+
+    public static boolean CzyParzysta(int d) {
+        if (d % 2 == 0) return true;
+        return false;
+    }
+
+    public static boolean Podzielna3i5(int c) {
+        if (c % 3 == 0 && c % 5 == 0) {
+            return true;
+        } else return false;
+    }
+    public static double Potega(int a){
+        return Math.pow(a,3);
+}
+public static double Pierwiastek(int a){
+        return Math.sqrt(a);
+}
+
+public static boolean Trojkat(int a,int b,int x) {
+    if(Math.pow(a,2)+Math.pow(b,2)==Math.pow(x,2))
+    return true;
+    else {
+        return false;
+    }
+}
+
+}
