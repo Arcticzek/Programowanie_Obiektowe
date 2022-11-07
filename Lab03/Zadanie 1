@@ -1,0 +1,35 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static Random rand() {
+        return new Random();
+    }
+
+    public static Scanner getFromKeyboard() {
+        return new Scanner(System.in);
+    }
+
+    public static void main(String[] args) {
+        // Ex 1
+        System.out.println("Podaj liczbe studentow");
+        int numberOfStudents = getFromKeyboard().nextInt();
+        System.out.println("Srednia wynosi: " + calcAvg(numberOfStudents));
+
+    }
+    // Exercise 1
+    public static double calcAvg(int numberOfStudents) {
+        int i = 0;
+        double sum = 0;
+        while (i < numberOfStudents) {
+            System.out.println("Punkty " + (i + 1) + " studenta:");
+            sum += getFromKeyboard().nextDouble();
+            i++;
+        }
+
+        return sum / numberOfStudents;
+    }
+
+
+}
