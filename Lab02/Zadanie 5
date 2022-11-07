@@ -1,0 +1,39 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static boolean stringToBoolean(String conv) {
+        return Boolean.parseBoolean(conv);
+    }
+
+    public static Scanner getFromKeyboard() {
+        return new Scanner(System.in);
+    }
+
+    public static void main(String[] args) {
+
+       
+        System.out.println("Provide information about discount and bonus (true/false)\nIs there any car discount?");
+        String discountAnswer = getFromKeyboard().next();
+        System.out.println("Did you get bonus in your job?");
+        String bonusAnswer = getFromKeyboard().next();
+        boolean discount = stringToBoolean(discountAnswer), bonus = stringToBoolean(bonusAnswer);
+        carBoughtCheck(discount, bonus);
+
+    }
+
+   
+    public static void carBoughtCheck(boolean discount, boolean bonus) {
+        if (!discount || bonus) {
+            System.out.println("You can bought a car! There is no discounts for the car");
+        }
+        if (!discount || !bonus) {
+            System.out.println("You have to postpone the purchase of the car for later... There is discounts for the car");
+        }
+        if (discount || bonus) {
+            System.out.println("You can bought a car!");
+        }
+    }
+
+}
