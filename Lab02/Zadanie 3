@@ -1,0 +1,25 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static Scanner getFromKeyboard() {
+        return new Scanner(System.in);
+    }
+
+    public static void main(String[] args) {
+
+        sortNumbers(4,1,7);
+
+    }
+    public static void sortNumbers(int x, int y, int z) {
+        int[] tab = {x, y, z};
+        Arrays.sort(tab);
+        System.out.print("Sorted x, y and z is: ");
+        for (int num : tab) {
+            System.out.print(num + " ");
+        }
+    }
+
+}
