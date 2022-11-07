@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+ 
+
+    public static void main(String[] args) {
+
+        
+        checkPalindrome("Klapek");
+        checkPalindrome("Drogi");
+    }
+
+
+    public static void checkPalindrome(String word) {
+        StringBuilder reversedWord = new StringBuilder();
+        reversedWord.append(word);
+        reversedWord.reverse();
+        if (word.equalsIgnoreCase(reversedWord.toString())) {
+            System.out.println("This word is a palindrome");
+        } else {
+            System.out.println("This word is not a palindrome");
+        }
+    }
+}
