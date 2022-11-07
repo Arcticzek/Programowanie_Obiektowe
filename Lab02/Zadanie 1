@@ -10,13 +10,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Ex 1
+        
         System.out.println("Provide a, b, and c to the quadratic equation!");
         double a = getFromKeyboard().nextDouble(), b = getFromKeyboard().nextDouble(), c = getFromKeyboard().nextDouble();
         quadraticEquation(a, b, c);
 
     }
-    // Exercise 1
+
     public static void quadraticEquation(double a, double b, double c) {
         double delta = Math.pow(b, 2) - 4 * a * c;
         if (delta > 0) {
