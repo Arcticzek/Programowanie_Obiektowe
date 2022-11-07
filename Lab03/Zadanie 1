@@ -12,13 +12,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Ex 1
+        
         System.out.println("Podaj liczbe studentow");
         int numberOfStudents = getFromKeyboard().nextInt();
         System.out.println("Srednia wynosi: " + calcAvg(numberOfStudents));
 
     }
-    // Exercise 1
+   
     public static double calcAvg(int numberOfStudents) {
         int i = 0;
         double sum = 0;
