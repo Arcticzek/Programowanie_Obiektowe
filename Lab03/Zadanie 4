@@ -18,7 +18,7 @@ public class Main {
 
     }
 
-    // Ex 4
+   
     public static void sumEvenNumbersInSequenceInRange(int n) {
         int[] arr = new int[n];
         int sumEven = 0;
