@@ -19,7 +19,7 @@ public class Main {
         sumAndAvgElements(createRandom(100, 10));
 
     }
-    // Exercise 1
+   
     public static void sumAndAvgElements(int[] arr) {
         int sum = 0;
         for (int elem : arr) {
