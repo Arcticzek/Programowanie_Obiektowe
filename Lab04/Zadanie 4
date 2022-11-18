@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+
+    public static Scanner getFromKeyboard() {
+        return new Scanner(System.in);
+    }
+    
+    public static String reverseWord(String word) {
+        StringBuilder reverse = new StringBuilder();
+        reverse.append(word);
+        reverse.reverse();
+        return reverse.toString();
+    }
+
+    public static void main(String[] args) {
+      
+        System.out.println("Provide five words to reverse them: ");
+        reversedWordsFromArray();
+
+    }
+
+    public static void reversedWordsFromArray() {
+        String[] arr = new String[5];
+        for (int i = 0; i < 5; i++) {
+            arr[i] = getFromKeyboard().next();
+            arr[i] = reverseWord(arr[i]);
+        }
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
+
