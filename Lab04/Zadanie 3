@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        System.out.print("\n");
+        String[] cats = {"KOT", "Drugi Kot", "trzeci KOT"};
+        printUpperCase(cats);
+
+    }
+    public static void printUpperCase (String[] arr) {
+        for (String elem : arr) {
+            System.out.println(elem.toUpperCase(Locale.ROOT));
+        }
+    }
+
+}
