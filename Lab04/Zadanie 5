@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+
+    public static Scanner getFromKeyboard() {
+        return new Scanner(System.in);
+    }
+    public static List<Integer> bubbleSort(List<Integer> numbers) {
+        for (int j = numbers.size() - 1; j > 0; j--) {
+            for (int i = 0; i < j; i++) {
+                if (numbers.get(i) > numbers.get(i + 1)) {
+                    Collections.swap(numbers, i, i + 1);
+                }
+            }
+        }
+        return numbers;
+    }
+    
+    public static void main(String[] args) {
+
+        System.out.println("\nProvide eight numbers to sort them: ");
+        sortEightNumbers();
+
+    }
+
+    public static void sortEightNumbers() {
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 8; i++) {
+            list.add(getFromKeyboard().nextInt());
+        }
+        List<Integer> sorted = bubbleSort(list);
+        sorted.forEach((n) -> System.out.println(n + " "));
+    }
+
+}
