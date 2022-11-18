@@ -15,7 +15,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Ex 1
+       
         sumAndAvgElements(createRandom(100, 10));
 
     }
